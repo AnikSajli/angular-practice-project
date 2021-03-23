@@ -19,7 +19,7 @@ import { AlertComponent } from './shared/alert/alert.component';
 import {PlaceholderDirective} from './shared/placeholder/placeholder.directive';
 import {RecipeService} from './recipes/recipe.service';
 import {AuthInterceptorService} from './auth/auth-interceptor.service';
-import {RecipesModule} from './recipes.module';
+import {RecipesModule} from './recipes/recipes.module';
 
 @NgModule({
   declarations: [
