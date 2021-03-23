@@ -6,6 +6,7 @@ import {RecipeStartComponent} from './recipes/recipe-start/recipe-start.componen
 import {RecipeDetailsComponent} from './recipes/recipe-details/recipe-details.component';
 import {EditRecipeComponent} from './recipes/edit-recipe/edit-recipe.component';
 import {AuthComponent} from './auth/auth-component/auth-component.component';
+import {AuthGuard} from "./auth/auth.guard";
 
 const routes: Routes = [
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
   {
     path: 'recipes',
     component: RecipesComponent,
+    canActivate: [AuthGuard],
     children: [
       {path: '', component: RecipeStartComponent},
       {path: 'new', component: EditRecipeComponent},
