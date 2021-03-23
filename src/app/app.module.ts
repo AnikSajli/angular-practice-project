@@ -4,8 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {MatButtonModule} from '@angular/material/button';
 import {HeaderComponent} from './header/header.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSelectModule} from '@angular/material/select';
@@ -20,13 +18,12 @@ import {PlaceholderDirective} from './shared/placeholder/placeholder.directive';
 import {RecipeService} from './recipes/recipe.service';
 import {AuthInterceptorService} from './auth/auth-interceptor.service';
 import {RecipesModule} from './recipes/recipes.module';
+import {ShoppingListModule} from './shopping-list/shopping-list.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ShoppingListComponent,
-    ShoppingEditComponent,
     DropdownDirective,
     AuthComponent,
     LoadingSpinnerComponent,
@@ -42,7 +39,8 @@ import {RecipesModule} from './recipes/recipes.module';
     MatSelectModule,
     FormsModule,
     HttpClientModule,
-    RecipesModule
+    RecipesModule,
+    ShoppingListModule
   ],
   providers: [ShoppingListService, RecipeService,
     {
