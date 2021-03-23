@@ -9,7 +9,7 @@ import {RecipeDetailsComponent} from './recipe-details/recipe-details.component'
 // @ts-ignore
 const routes: Routes = [
   {
-    path: 'recipes',
+    path: '',
     component: RecipesComponent,
     canActivate: [AuthGuard],
     children: [
